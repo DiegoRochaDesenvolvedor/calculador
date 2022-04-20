@@ -1,6 +1,6 @@
 const fs = require('fs')
 const validador = require('../controller/validador')
-const validateDuplicity = require('./validateDuplicity')
+const validateDuplicity = require('./validandoDuplicidade')
 
 
 

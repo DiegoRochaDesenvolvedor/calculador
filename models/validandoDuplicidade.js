@@ -1,4 +1,4 @@
-const { stringify } = require("querystring");
+
 
 function validateMouth (dados,inputData){
     let dataAtual = new Date(inputData.IncludeData)

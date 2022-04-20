@@ -36,18 +36,7 @@ async function armazenandoEalterando(dadosParaAlterar,indiceParaAlterar){
     }
     if(dadosParaAlterar.anotacao!=''){
         filtro[0].anotacao = dadosParaAlterar.anotacao        
-    }
-
-    // console.log(dadosTratados.indexOf(filtro.codigo == indiceParaAlterar))
-    // console.log(dadosTratados[0])
-    // console.log(dadosTratados.indexOf(dadosTratados.codigo === 4))
-    // console.log(dadosTratados[0].codigo)
-    // console.log(indiceParaAlterar)
-    // console.log(filtro)
-    
-    
-    
-
+    } 
 
 }
 
