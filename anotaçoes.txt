@@ -1,2 +1,2 @@
 Para usar o sistema basta abrir o script principal.js em ambiente node,
-após alterar as variaveis nesta pagina
+após alterar as variaveis na pagina principal.js
