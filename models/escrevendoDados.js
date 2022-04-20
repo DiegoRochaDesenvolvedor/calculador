@@ -23,17 +23,22 @@ class criandoJSON{
         let leitura = lista.concat(leituraJSON)            
         let resultado = validador(leituraJSON,leitura,formatojson,lista)
 
-        let filtro = resultado.filter(function(obj){return obj.Fare == 1 })
-        console.log(filtro)
+        // let filtro = resultado.filter(function(obj){return obj.Fare == 1 })
+        // console.log(filtro)
 
-        // if(filtro=true){
-        //     console.log('true')
-        // }else{
-        //     console.log('false')
-        // }     
+        // // if(filtro=true){
+        // //     console.log('true')
+        // // }else{
+        // //     console.log('false')
+        // // }     
 
       
         // date.validateMouth()
+        //---------------------
+        
+        //---------------------
+
+
             fs.writeFile("./arquivo.json",JSON.stringify(resultado,null,'\t'),err=>{
                 if(err){
                     console.log('deu erro')
