@@ -1,0 +1,2 @@
+Para usar o sistema basta abrir o script principal.js
+após alterar as variaveis nesta pagina

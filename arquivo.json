@@ -1,0 +1,17 @@
+[
+	{
+		"Fare": 2.49,
+		"OperatorCode": "OP01",
+		"IncludeData": "2022-04-20T17:23:21.757Z"
+	},
+	{
+		"Fare": 2.49,
+		"OperatorCode": "OP01",
+		"IncludeData": "2022-04-20T17:22:48.899Z"
+	},
+	{
+		"Fare": 2.49,
+		"OperatorCode": "OP01",
+		"IncludeData": "2022-04-20T17:22:46.259Z"
+	}
+]
