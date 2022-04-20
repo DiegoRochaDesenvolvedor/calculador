@@ -14,7 +14,7 @@ class criandoJSON{
         let lista=[];
         let formatojson ={
             "Fare": this.fare,
-            "OpertorCode": this.operatorCode,
+            "OperatorCode": this.operatorCode,
             "IncludeData": new Date(),                
         }
         
@@ -23,13 +23,10 @@ class criandoJSON{
         const leituraJSON =await fs.promises.readFile('./arquivo.json',encoding)
         let leitura = lista.concat(leituraJSON)            
         let resultado = validador(leituraJSON,leitura,formatojson,lista)
-
-        
-        //////////////// let filtro = resultado.filter(function(obj){return obj.Fare == 1 })
         let employes = JSON.parse(leituraJSON)
       
         if(validateDuplicity(employes,formatojson)){
-            console.log('Ja existe taxa cadastrada para mesma empresa com menos de 6 meses')
+            console.log(`Ja existe um registro para a entidade ${formatojson.OperatorCode}`)
         }else{
             fs.writeFile("./arquivo.json",JSON.stringify(resultado,null,'\t'),err=>{
                 if(err){
