@@ -1,6 +1,7 @@
 const fs = require('fs')
 const validador = require('../controller/validador')
-const date = require('./validateMouth')
+const validateDuplicity = require('./validateDuplicity')
+
 
 
 class criandoJSON{
@@ -13,8 +14,8 @@ class criandoJSON{
         let lista=[];
         let formatojson ={
             "Fare": this.fare,
-            "Opertor-Code": this.operatorCode,
-            "Include-Data": new Date(),                
+            "OpertorCode": this.operatorCode,
+            "IncludeData": new Date(),                
         }
         
         
@@ -23,30 +24,23 @@ class criandoJSON{
         let leitura = lista.concat(leituraJSON)            
         let resultado = validador(leituraJSON,leitura,formatojson,lista)
 
-        // let filtro = resultado.filter(function(obj){return obj.Fare == 1 })
-        // console.log(filtro)
-
-        // // if(filtro=true){
-        // //     console.log('true')
-        // // }else{
-        // //     console.log('false')
-        // // }     
-
-      
-        // date.validateMouth()
-        //---------------------
         
-        //---------------------
-
-
+        //////////////// let filtro = resultado.filter(function(obj){return obj.Fare == 1 })
+        let employes = JSON.parse(leituraJSON)
+      
+        if(validateDuplicity(employes,formatojson)){
+            console.log('Ja existe taxa cadastrada para mesma empresa com menos de 6 meses')
+        }else{
             fs.writeFile("./arquivo.json",JSON.stringify(resultado,null,'\t'),err=>{
                 if(err){
-                    console.log('deu erro')
+                    console.log(err)
                 }else{
-                    console.log('arquivo salvo')
+                    console.log('taxa cadastrada')
                 }
             })
-            
+
+        }
+                
         }
         
  }

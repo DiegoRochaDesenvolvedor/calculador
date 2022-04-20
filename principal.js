@@ -3,14 +3,10 @@ const leitura = require('./models/leituraDados')
 
 
 
-const fare = 4; //criar comando para inserção de dados
-const operatorCode = 3;
+const fare = 4;
+const operatorCode = 5;
 
 
 
 escrevendo(fare,operatorCode)
-leitura.lendo()
-// teste.lendoPorInidice(4)
-
-
-//precisamos aprender como separar as funcções em um import, ou usar classe
+// leitura.lendo()
